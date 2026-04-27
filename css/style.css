@@ -1,0 +1,138 @@
+*{
+    --main-bg-color: #07111F;
+    --main-text-color: #F4F8FF;
+
+    --navbar-main-bg-color: #102A43;
+    --navbar-main-text-color: #D8E6F3;
+    --navbar-hover-bg-color: #b0dcff;
+    --navbar-hover-text-color: #191c5b;
+
+    --section-project-bg-color: #000fff;
+    --section-work-bg-color: #f5f798;
+
+    --footer-bg-color: #030814;
+    --footer-text-color: #AAB8C8;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 60px;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+nav-brand a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--navbar-main-text-color);
+    text-decoration: none;
+}
+
+nav-brand .nav-brand-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-brand-logo {
+    width: auto;
+    height: 32px;
+}
+
+.main-navbar::part(main) {
+    background-color: var(--navbar-main-bg-color);
+    color: var(--navbar-main-text-color);
+    padding: 6px 12px;
+}
+
+.main-navbar nav-button {
+    --nav-link-color: var(--navbar-main-text-color);
+    --nav-link-hover-background-color: var(--navbar-hover-bg-color);
+    --nav-link-hover-color: var(--navbar-hover-text-color);
+}
+
+.main-navbar nav-menu {
+    --nav-menu-items-gap: 0;
+}
+
+.main-navbar nav-button icon-logo {
+    --size: 32px;
+}
+
+.header {
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+}
+
+.header-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+star-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.section {
+    padding: 24px 0;
+}
+
+.section#project {
+    background-color: var(--section-project-bg-color);
+}
+
+.section#work {
+    background-color: var(--section-work-bg-color);
+}
+
+.section .section-title {
+    margin: 0 auto 12px;
+    width: 100%;
+}
+
+.section .inner{
+    display: flex;
+    flex-direction: column;
+    margin: 12px auto;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .section .section-title, .section .inner {
+        width: 80%;
+    }
+    
+    .section .inner{
+        flex-direction: row;
+    }
+}
+
+.description {
+    display: none;
+}
+
+main-footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    padding: 12px 0;
+}
