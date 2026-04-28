@@ -7,8 +7,23 @@
     --navbar-hover-bg-color: #b0dcff;
     --navbar-hover-text-color: #191c5b;
 
-    --section-project-bg-color: #000fff;
-    --section-work-bg-color: #f5f798;
+    --section-project-bg-color: #2F343A;
+    --section-project-text-color: #ECEFF1;
+    --section-project-tile-color: #8A949E;
+    --section-project-tile-text-color: #121619;
+    --section-project-title-text-color: #F5F7FA;
+
+    --section-work-bg-color: #5A3B1E;
+    --section-work-text-color: #FFF4D6;
+    --section-work-tile-color: #E3A72F;
+    --section-work-tile-text-color: #24160A;
+    --section-work-title-text-color: #FFE6A3;
+
+    --section-about-bg-color: #0B2D4D;
+    --section-about-text-color: #F2FAFF;
+
+    --section-contact-bg-color: #4A1F16;
+    --section-contact-text-color: #F7E4D0;
 
     --footer-bg-color: #030814;
     --footer-text-color: #AAB8C8;
@@ -97,12 +112,97 @@ star-background {
     padding: 24px 0;
 }
 
+.section .section-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.section .section-title icon-logo {
+    --size: 1em;
+}
+
 .section#project {
     background-color: var(--section-project-bg-color);
+    color: var(--section-project-text-color);
+}
+
+.section#project tile-block {
+    --tile-bg-color: var(--section-project-tile-color);
+    --tile-text-color: var(--section-project-tile-text-color);
 }
 
 .section#work {
     background-color: var(--section-work-bg-color);
+    color: var(--section-work-text-color);
+}
+
+.section#work tile-block {
+    --tile-bg-color: var(--section-work-tile-color);
+    --tile-text-color: var(--section-work-tile-text-color);
+}
+
+.section#about {
+    background-color: var(--section-about-bg-color);
+    color: var(--section-about-text-color);
+}
+
+.section#contact {
+    background-color: var(--section-contact-bg-color);
+    color: var(--section-contact-text-color);
+}
+
+.section#contact .sns {
+    height: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+.section#contact .sns .sns-item {
+    flex: 1;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    box-sizing: border-box; /* 讓 padding 包含在高度內 */
+    height: 100%; /* 填滿父元素高度 */
+    display: flex; /* 讓文字可以垂直置中 */
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    transition: 0.25s;
+}
+
+.section#contact .sns .sns-item a {
+    color: #fff;
+    transition: font-weight 0.25s;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    line-height: 3em;
+}
+
+.section#contact .sns .sns-item a:hover {
+    font-weight: bold;
+}
+
+.section#contact .sns .sns-item.x-twitter {
+    background-color: #1DA1F2;
+}
+
+.section#contact .sns .sns-item.facebook {
+    background-color: #0165E1;
+}
+
+.section#contact .sns .sns-item.instagram {
+    background-color: #E1306C;
+}
+
+.section#contact .sns .sns-item.pixiv {
+    background-color: #0096FA;
 }
 
 .section .section-title {
